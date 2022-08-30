@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #333
+    /* background: rgb(235, 231, 231); */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card span {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 300px;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    transform-origin: 125px 0;
+    transform: rotate(calc(90deg * var(--i)));
+    filter: blur(90px);
+    opacity: 0.75;
+}
+
+.card span:nth-child(1) {
+    background: rgb(85, 142, 248)
+}
+
+.card span:nth-child(2) {
+    background: rgb(88, 211, 7)
+}
+
+.card span:nth-child(3) {
+    background: rgb(236, 35, 78)
+}
+
+.card span:nth-child(4) {
+    background: rgb(34, 6, 134)
+}
+
+.card .glass {
+    position: absolute;
+    height: 350px;
+    width: 550px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.card .glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    transform: skewX(345deg);
+}
+
+.card .glass h2 {
+    padding: 20px;
+    font-weight: 400;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #333;
+    text-align: end;
+}
